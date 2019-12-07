@@ -1,50 +1,29 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
+    <!-- This is the navigation bar component -->
+    <Navbar />
+    <!-- the section adds vertical padding to your content -->
+    <section class="section">
+      <!-- the container class adds horizontal padding when not on mobile -->
+      <div class="container">
+        <!-- the content class formats normal HTML elements underneath it to match Bulma's style -->
+        <div class="content">
+          <!-- Page content is added here -->
+          <slot />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
+<script>
+import Navbar from "~/components/Navbar.vue";
+
+export default {
+  components: {
+    Navbar
   }
-}
-</static-query>
+};
+</script>
 
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
-
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-</style>
+<style lang="scss"></style>

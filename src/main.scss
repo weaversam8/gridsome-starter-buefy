@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+// Import any variables we want to use to customize the project
+@import "variables.scss";
+
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
