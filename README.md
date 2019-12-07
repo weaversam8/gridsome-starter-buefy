@@ -12,3 +12,5 @@ This project is a default starter for [Gridsome](https://gridsome.org) using the
 2. `cd my-website` to open the folder
 3. `gridsome develop` to start a local dev server at `http://localhost:8080`
 4. Happy coding 🎉🙌
+
+(this project was based off of the original [`gridsome-starter-default`](https://github.com/gridsome/gridsome-starter-default) template)
